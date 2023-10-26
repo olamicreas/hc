@@ -9838,4 +9838,128 @@ ul {
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+  
+}
+
+
+ .container {
+                display: flex;
+                flex-direction: column; /* Display sections in a column */
+                margin: 20px;
+            }
+
+
+            section:hover {
+                background-color: #6814ec;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 0;
+            }
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    font-size: 1.2rem;
+}
+
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+        }
+
+        ul.dropdown {
+            display: none;
+        }
+
+        li:hover .dropdown, li:focus-within .dropdown {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+        .section {
+            opacity: 0; /* Initially hide sections */
+            transition: opacity 0.5s ease;
+            padding: 20px; /* Add padding to create a larger box */
+            margin: 20px; /* Add margin for spacing */
+            border: 1px solid #ddd; /* Add a border for the box */
+            border-radius: 10px; /* Apply border-radius for rounded corners */
+            font-family: 'Arial', sans-serif; /* Set a font style */
+            font-size: 1.2em; /* Set font size */
+            padding: 10px;
+            background-color:  black;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        /* Additional styles for the fade-in animation */
+        .fade-in {
+            opacity: 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .book-button {
+    background-color: #fff;
+    color: #6814ec;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    
+}
+
+.book-button:hover {
+    background-color: #ff00a2;
+    color: #fff;
+}
+/* Existing CSS styles for the body and .container */
+.scroll-down-button {
+    background-color: #6814ec;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.scroll-down-button:hover {
+    background-color: #ff00a2;
+}
+
+/* Additional CSS to style the FontAwesome icon */
+.scroll-down-button .fas.fa-arrow-down {
+    font-size: 20px;
 }
