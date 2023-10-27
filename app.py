@@ -33,8 +33,8 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route('/services')
-def services():
+@app.route('/service')
+def service():
     return render_template('service.html')
 
 @app.route('/contact')
