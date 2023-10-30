@@ -41,7 +41,7 @@
   }
   em{
   font-style:normal;
-  color:#1487e9;
+  color: #ff00a2;
   }
   .btn1,.btn2{
   padding:15px;
@@ -55,7 +55,7 @@
   transition:0.5s;
   }
   .btn1{
-  background: transparent linear-gradient(90deg, #167ce9 0%, #07CCEC 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #ff00a2 0%, #e283bf 100%) 0% 0% no-repeat padding-box;
   color:#fff;
   font-weight:600;
   }
@@ -63,7 +63,7 @@
   box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
   }
   .btn2{
-  background:#1488e9;
+  background: #ff00a2;
   color:#fff;
   font-weight:600;
   border-radius:5px;
@@ -139,7 +139,7 @@
   }
   
   .banner{
-  background: transparent linear-gradient(90deg, #167ce9 0%, #07CCEC 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #ff00a2 0%, #e283bf 100%) 0% 0% no-repeat padding-box;
   width:100%;
   padding:10px 0;
   }
@@ -154,9 +154,9 @@
   }
   
   .logo{
-  background: transparent linear-gradient(90deg, #167ce9 0%, #1487e9 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #167ce9 0%,  #ff00a2 100%) 0% 0% no-repeat padding-box;
   color:#000;
-  padding:25px;
+  padding:15px;
   width:230px;
   position:absolute;
   left:-20px;
@@ -190,7 +190,7 @@
   display:none;
   }
   .logo{
-  background: transparent linear-gradient(90deg, #167ce9 0%, #0fa1ea 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg,  #167ce9 0%,  #ff00a2 100%) 0% 0% no-repeat padding-box;
   }
   }
   
@@ -254,7 +254,7 @@
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-top:2px solid #1487e9;
+  border-top:2px solid  #ff00a2;
   z-index: 1;
   -webkit-animation-name: slideIn;
   -webkit-animation-duration: 1s;
@@ -272,7 +272,7 @@
   }
   
   .topnav a:hover, .dropdown:hover .dropbtn {
-  color:#1487e9;
+  color: #ff00a2;
   }
   
   .dropdown-content a:hover {
@@ -477,7 +477,7 @@
   
   .section2 .cards .card .fa{
   font-size:3em;
-  color:#01bcd4;
+  color:  #8048da;
   }
   
   .section2 .cards .card p{
@@ -529,7 +529,7 @@
   }
   
   .section3 .cards .card section h1{
-  color:#167ce9;
+  color: black;
   }
   
   .section3 .content{
