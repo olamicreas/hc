@@ -28,7 +28,9 @@
 
 <div class="logo parallelogram">
 <span class="skew-fix"><img src="{{url_for('static', filename='log.jpeg')}}" ></span>
+
 </div>
+
 
 <div class="topnav" id="myTopnav">
 <a href="#" class="active">HOME</a>
@@ -39,7 +41,7 @@
 </button>
 <div class="dropdown-content animate">
 <a href="#">Weight loss consultant</a>
-<a href="#">Men’s health I.e Erectile Dysfunction</a>
+<a href="#">Men’s health </a>
 <a href="#">Holistic </a>
 <a href="#">IV hydration </a>
 <a href="#">Hair loss treatments </a>
@@ -50,6 +52,7 @@
 <a href="#" title="SignIn" style="float:right;"><i class="fa fa-user"></i></a>
 <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
+
 </header>
 
 
@@ -58,8 +61,9 @@
 
 <!--CONTAINER-->
 <div class="container">
+  
 <section>
-<em>WELCOME TO Satori Self Care, LLC</em>
+<em style="color: #6814ec; font-style: italic; font-family: monospace; font-size: x-large; font-weight: bold;">WELCOME TO Satori Self Care, LLC</em>
 <h1>Take the world's best quality Treatment</h1>
 <h4>We make the best treatments.</h4>
 
@@ -101,7 +105,7 @@
 <div class="cards">
 <div class="card">
 <i class="fa fa-medkit"></i>
-<h1>Qualified Doctors</h1>
+<h1>Qualified Nurses</h1>
 <p>Lorem ipsum amet, consectetur adipiscing elit, sed do eiusmod tempor cididunt facilisis.</p>
 </div>
 <div class="card">
@@ -109,16 +113,8 @@
 <h1>Certified Services</h1>
 <p>Lorem ipsum amet, consectetur adipiscing elit, sed do eiusmod tempor cididunt facilisis.</p>
 </div>
-<div class="card">
-<i class="fa fa-stethoscope"></i>
-<h1>Advanced Equipment</h1>
-<p>Lorem ipsum amet, consectetur adipiscing elit, sed do eiusmod tempor cididunt facilisis.</p>
-</div>
-<div class="card">
-<i class="fa fa-heartbeat"></i>
-<h1>Emergency Service</h1>
-<p>Lorem ipsum amet, consectetur adipiscing elit, sed do eiusmod tempor cididunt facilisis.</p>
-</div>
+
+
 </div>
 </section>
 
@@ -139,7 +135,7 @@
 </div>
 <div class="card">
 <section>
-<h1>Men’s health I.e Erectile Dysfunction</h1>
+<h1>Men’s health</h1>
 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
 </section>
 </div>
@@ -165,33 +161,15 @@
 <!--SECTION4-->
 <section class="section4">
 <div class="title_header">
-<h1>Our Gallery Portfolio</h1>
+<h1>Our Logo with Slogan</h1>
 </div>
-<div class="row">
-<div class="column">
-<img src="https://i.ibb.co/Sft7gKp/bg2.webp" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-</div>
-<div class="column">
-<img src="https://i.ibb.co/Sft7gKp/bg2.webp" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-</div>
-<div class="column">
-<img src="https://i.ibb.co/Sft7gKp/bg2.webp" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-</div>
-<div class="column">
-<img src="https://i.ibb.co/Sft7gKp/bg2.webp" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-</div>
-<div class="column">
-<img src="https://i.ibb.co/Sft7gKp/bg2.webp" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-</div>
-<div class="column">
-<img src="https://i.ibb.co/Sft7gKp/bg2.webp" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
-</div>
-<div class="column">
-<img src="https://i.ibb.co/Sft7gKp/bg2.webp" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
-</div>
-<div class="column">
-<img src="https://i.ibb.co/Sft7gKp/bg2.webp" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
-</div>
+<div style="display: flex; justify-content: center;" class="row">
+    <div>
+        <img src="{{url_for('static', filename='log.jpeg')}}"  style="width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+    <p style="justify-content: center; text-align: center; font-style: italic; font-family: cursive; font-weight: bolder; font-size: large; margin-top: 15%;">
+        <q>The key to happiness is not to wait for it to happen, but to take the journey towards it.</q> 
+    </p>
 </div>
 
 <div id="myModal" class="modal">
