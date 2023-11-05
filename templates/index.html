@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 <!--FONTAWESOME-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <!--GOOGLE FONTS-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +20,38 @@
 <link rel="stylesheet" href="{{url_for('static', filename='s.css')}}">
 
 </head>
+<style>
+    .fade-in {
+        opacity: 1;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .book-button {
+        background-color: whitesmoke;
+        box-shadow: 5px 10px #888888;
+        color: #6814ec;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        font-size: small;
+        
+    }
+
+    .book-button:hover {
+        background-color: #ff00a2;
+        color: #fff;
+    }
+</style>
 <body>
 
 <!--HEADER-->
@@ -48,7 +80,7 @@
 </div>
 </div> 
 <a href="contact">CONTACT</a>
-<a href="#about">ABOUT</a>
+<a href="about">ABOUT</a>
 <a href="#" title="SignIn" style="float:right;"><i class="fa fa-user"></i></a>
 <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
@@ -89,7 +121,7 @@
 <em>ABOUT US</em>
 <h1>Get better care for your health</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+<p><a class="book-button">click to know about your provider</a> </p>
 </td>
 </tr>
 </table>
@@ -130,7 +162,7 @@
 <div class="card">
 <section>
 <h1>Weight loss consultant</h1>
-<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+<h4>Accountability is as much as an important part of a diet as the diet itself!</h4>
 </section>
 </div>
 <div class="card">
@@ -147,7 +179,7 @@
 </div>
 </div>
 <div class="content">
-<h1>We are well experienced Nurses</h1>
+<h1>We are well experienced doctors</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 </div>
 </section>
@@ -159,6 +191,49 @@
 
 
 <!--SECTION4-->
+<div class="content-103">
+	<div class="contain">
+		<div class="row">
+			<h2 class="sercies-title">Our Awesome Services</h2>
+			<div class="col-md-4 col-sm-4">
+				<div class="service-post">
+					<div class="service-content">
+						<div class="service-icon">
+							<i class="fa fa-weight-scale"></i>
+						</div>
+						<!-- service-icon -->
+						<h2 class="service-title">Weight Loss</h2>
+						<p class="service-description">
+                            Did you know that diabetes is a serious health condition that can lead to a host of complications? To st. healthy, it's important to get screened for diabetes or predabetes starting at age 45, regardless of your weight. Even if you don't have any symptoms, if you're overweight or obese and have one or more additional diabetes risk tactors, you should stil get screened. So be sure to consult with your healthcare provider don't wait until it's too late - take charge of your health today!
+                        </p>
+					</div>
+					<!-- service-content -->
+					<div class="service-hover"></div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<div class="service-post">
+					<div class="service-content">
+						<div class="service-icon">
+							<i class="fa fa-user-nurse"></i>
+						</div>
+						<!-- .s-icon -->
+						<h3 class="service-title">IV therapy</h3>
+						<p class="service-description">
+                            Intravenous treatments offer unparalleled benefits that surpass oral administration. With nutrients infuse directly into the bloodstream, I treatments bypass common issues such as stomach upset, absorption difficulties, and loss of potency. The direct infusion into the bloodstream also allows for much larger doses, without any gastrointestinal side effects. Our I therapies are customized to provide the perfect combination of vitamins, minerals, and medications that will help you feel your best. Whether you need to recover from a late night out or a tough workout, or are simply looking to improve your overall heath, we have the perfect solution for you. Please note that prior to administration, every patient must fill out a comprehensive medical history and undergo evaluation by one of our highly trained medical providers.
+Don't settle for subpar health - try our I therapies today and feel the difference!
+                        </p>
+					</div>
+					<!-- service-content -->
+					<div class="service-hover"></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
 <section class="section4">
 <div class="title_header">
 <h1>Our Logo with Slogan</h1>
@@ -231,9 +306,9 @@
 <div class="column">
 <a class="footer_title">Satori Self Care, LLC</a>
 <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
-<a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
-<a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
-<a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+<a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+<a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+<a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
 </div>
 <div class="column">
 <a class="footer_title">OTHER LINKS</a>
@@ -247,12 +322,12 @@
 <a href="">Our Services</a>
 
 <a href="">Our Projects</a>
-<a href="">About Us</a>
+<a href="about">About Us</a>
 </div>
 
 <div class="column">
 <a class="footer_title">GET IN TOUCH</a>
-<a title="Address"><i class="fa fa-map-marker"></i> 007, street, province/state, country - zipcode</a>
+<a title="Address"><i class="fa fa-map-marker"></i> 700, Johnnycake Rd Suite 101, province/state, country - zipcode</a>
 <a href="emailto:" title="Email"><i class="fa fa-envelope"></i> satoriselfcare@gmail.com </a>
 <a href="tel:" title="Contact"><i class="fa fa-phone"></i>667-375-5376</a>
 </div>
