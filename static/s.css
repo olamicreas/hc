@@ -916,3 +916,98 @@
   font-size:1.3em;
   }
   }
+
+
+
+
+  .content-103{
+    background: #f3f3f3;
+    padding-bottom:50px;
+  }
+  
+  .content-103 .sercies-title{
+    text-align:center;
+    padding: 50px 0;
+  }
+  
+  .service-post {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 12;
+    margin-bottom: 30px;
+    -moz-box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.08);
+  }
+  .content-103 .service-content {
+    position: relative;
+    z-index: 13;
+  }
+  .content-103 .service-icon {
+    margin: 10px 0 20px 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    border: 2px solid #ff00a2;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 50px;
+    -moz-transition: color, 250ms;
+    -o-transition: color, 250ms;
+    -webkit-transition: color, 250ms;
+    transition: color, 250ms;
+  }
+  .content-103 .service-post:hover .service-icon {
+    border-color: #fff;
+  }
+  .content-103 .service-icon i {
+    font-size: 18px;
+    color: #ff00a2;
+  }
+  .content-103 .service-post:hover .service-icon i {
+    color: #fff;
+  }
+  .content-103 .service-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    -moz-transition: color, 250ms;
+    -o-transition: color, 250ms;
+    -webkit-transition: color, 250ms;
+    transition: color, 250ms;
+  }
+  .content-103 .service-post:hover .service-title {
+    color: #fff;
+  }
+  .content-103 .service-description {
+    -moz-transition: color, 250ms;
+    -o-transition: color, 250ms;
+    -webkit-transition: color, 250ms;
+    transition: color, 250ms;
+  }
+  .content-103 .service-post:hover .service-description {
+    color: #fff;
+  }
+  
+  
+  .content-103 .service-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    height: 0px;
+    background: #ff00a2;
+    -moz-transition: width, 250ms;
+    -o-transition: width, 250ms;
+    -webkit-transition: width, 250ms;
+    transition: width, 250ms;
+  }
+  /*hover-background-color effect*/
+  .content-103 .service-post:hover .service-hover {
+    height: 100%;
+  }
