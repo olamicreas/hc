@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>MenuBar</title>
+<title>Satori Selfcare</title>
 
 <!--META TAGS-->
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet"> 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!--EXTERNAL CSS-->
 <link rel="stylesheet" href="{{url_for('static', filename='s.css')}}">
 
@@ -46,11 +46,102 @@
         font-size: small;
         
     }
+    .book-btn {
+
+        background-color: whitesmoke;
+        
+        color: #6814ec;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        font-size: small;
+
+    }
 
     .book-button:hover {
         background-color: #ff00a2;
         color: #fff;
     }
+
+    .book-btn:hover {
+        background-color: #ff00a2;
+        color: #fff;
+    }
+
+
+    .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #ff00a2;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #ff00a2;
+  color: white;
+}
+
+
 </style>
 <body>
 
@@ -197,21 +288,6 @@
 		<div class="row">
 			<h2 class="sercies-title">Our Awesome Services</h2>
 			<div class="col-md-4 col-sm-4">
-				<div class="service-post">
-					<div class="service-content">
-						<div class="service-icon">
-							<i class="fa fa-weight-scale"></i>
-						</div>
-						<!-- service-icon -->
-						<h2 class="service-title">Weight Loss</h2>
-						<p class="service-description">
-                            Did you know that diabetes is a serious health condition that can lead to a host of complications? To st. healthy, it's important to get screened for diabetes or predabetes starting at age 45, regardless of your weight. Even if you don't have any symptoms, if you're overweight or obese and have one or more additional diabetes risk tactors, you should stil get screened. So be sure to consult with your healthcare provider don't wait until it's too late - take charge of your health today!
-                        </p>
-					</div>
-					<!-- service-content -->
-					<div class="service-hover"></div>
-				</div>
-			</div>
 			<div class="col-md-4 col-sm-4">
 				<div class="service-post">
 					<div class="service-content">
@@ -222,13 +298,68 @@
 						<h3 class="service-title">IV therapy</h3>
 						<p class="service-description">
                             Intravenous treatments offer unparalleled benefits that surpass oral administration. With nutrients infuse directly into the bloodstream, I treatments bypass common issues such as stomach upset, absorption difficulties, and loss of potency. The direct infusion into the bloodstream also allows for much larger doses, without any gastrointestinal side effects. Our I therapies are customized to provide the perfect combination of vitamins, minerals, and medications that will help you feel your best. Whether you need to recover from a late night out or a tough workout, or are simply looking to improve your overall heath, we have the perfect solution for you. Please note that prior to administration, every patient must fill out a comprehensive medical history and undergo evaluation by one of our highly trained medical providers.
-Don't settle for subpar health - try our I therapies today and feel the difference!
+                            Don't settle for subpar health - try our I therapies today and feel the difference!
                         </p>
 					</div>
 					<!-- service-content -->
 					<div class="service-hover"></div>
 				</div>
 			</div>
+            <div class="service-post">
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fa fa-weight-scale"></i>
+                    </div>
+                    <!-- service-icon -->
+                    <h2 class="service-title">Weight Loss</h2>
+                    <p class="service-description">
+                        Did you know that diabetes is a serious health condition that can lead to a host of complications? To st. healthy, 
+                        it's important to get screened for diabetes or predabetes starting at age 45, 
+                        regardless of your weight. Even if you don't have any symptoms, 
+                        if you're overweight or obese and have one or more additional diabetes risk tactors, 
+                        you should stil get screened. So be sure to consult with your healthcare provider don't wait until 
+                        it's too late - take charge of your health today!
+                        
+                        <button id="myBtn" class="book-btn" >click to read more...</button>
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <span class="close">&times;</span>
+                                <h2>Weight Loss</h2>
+                              </div>
+                              <div class="modal-body">
+                                <p style="font-weight: bold;">Semuglatide</p>
+                                <p>.
+                                    Semaglutide is a game-changing medication that belongs to a class of drugs known as GLP-1
+                                    receptor agonists. It has been proven to effectively regulate blood sugar 
+                                    levels in type 2 diabetes patients and has also been FDA-approved for weight loss. If you're looking for a trusted solution to manage your diabetes or kickstart your weight loss journey, book your appointment for consultation today.
+                                    <p style="font-weight: bold;">Lipo mini shot</p>
+                                    Lipo-Mino Mix - the ultimate solution for weight loss and optimal health! This unique blend of lipodtopics. 
+                                    B vitamins, and other key ingredients helps turn fat into energy, boost your immune systern, reduce appetite, and build muscle. Try it today and feel the differencel
+                                    <p style="font-weight: bold;"> Glutathione </p>
+                                    Did you know that incorporating glutathione into your die can provide a range of benefits? Not only can 
+                                    it help your body metabolize toxins, but it can also break down free radicals, boost immune function, and much more. Give your body the support it needs by adding glutathione to your daily routine
+                                    <p style="font-weight: bold;"> Vitamin B12 shot </p>
+                                    Mithodoobalamin, an active form of Vitamin B12, is essential for maintaining metabolism, blood celis, 
+                                    and nerve function. Low levels of B12 can lead to fatigue, anemia, 
+                                    and more serious complications such as neurological impairment, infertility, 
+                                    and joint pain Supplementation is necessary for those with certain health conditions or poor nutrition Earty intervention and 
+                                    812 Mteatment ate crucial for optimal physical and mental health. Book now to improve energy!
+                                </p>
+                                
+                              </div>
+                              
+                            </div>
+                          
+                          </div>
+                    </p>
+                </div>
+                <!-- service-content -->
+                <div class="service-hover"></div>
+            </div>
+        </div>
 			
 		</div>
 	</div>
@@ -328,8 +459,7 @@ Don't settle for subpar health - try our I therapies today and feel the differen
 
 <div class="column">
 <a class="footer_title">GET IN TOUCH</a>
-<a title="Address"><i class="fa fa-map-marker"></i> 7001 Johnnycake rd 
-Windsor Mill, MD 21244 </a>
+<a title="Address"><i class="fa fa-map-marker"></i>7001 Johnnycake rd Windsor Mill, MD 21244</a>
 <a href="emailto:" title="Email"><i class="fa fa-envelope"></i> satoriselfcare@gmail.com </a>
 <a href="tel:" title="Contact"><i class="fa fa-phone"></i>667-375-5376</a>
 </div>
@@ -352,6 +482,31 @@ Windsor Mill, MD 21244 </a>
     
         }
     
+    }
+
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
     }
 
 </script>
