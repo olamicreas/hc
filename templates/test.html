@@ -81,82 +81,77 @@
 
 
 <body>
-    <div class="testimonial-slider">
-        <div id="carouselExampleControls" class="carousel carousel-dark">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="testimonial-title">
-                  <i class="bi bi-quote display-1"></i>
-                  <h2 class="fw-bold display-6">What our customers say</h2>
+<div class="testimonial-slider">
+    <div id="carouselExampleControls" class="carousel carousel-dark">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="testimonial-title">
+              <i class="bi bi-quote display-1"></i>
+              <h2 class="fw-bold display-6">What our customers say</h2>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="col-md-8">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card">
+                  <div class="img-wrapper"><img src="{{ url_for('static', filename='1.jpg')}}" class="d-block w-100" alt="Image 1"> </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Before</h5>
+                    <p class="card-text">"Before I met Nurse Practitioner Juantia, I was struggling with weight loss and had tried every diet without success. Meeting her changed my life completely." - Person 1</p>
+                  </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
               </div>
-              <div class="col-md-8">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="card">
-                      <div class="img-wrapper"><img src="{{ url_for('static', filename='1.jpg')}}" class="d-block w-100" alt="..." > </div>
-                      <div class="card-body">
-                        <h5 class="card-title">Before</h5>
-                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                        
-                        <p class="card-text">Before I met Nurse Practitioner Juantia.</p>
-                      </div>
-                    </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper"><img src="{{ url_for('static', filename='2.jpg')}}" class="d-block w-100" alt="Image 2"> </div>
+                  <div class="card-body">
+                    <h5 class="card-title">After</h5>
+                    <p class="card-text">"After I met Nurse Practitioner Juantia, I managed to lose weight effectively with her guidance and support." - Person 2</p>
                   </div>
-                  <div class="carousel-item">
-                    <div class="card">
-                      <div class="img-wrapper"><img src="{{ url_for('static', filename='2.jpg')}}" class="d-block w-100" alt="..."> </div>
-                      <div class="card-body">
-                        <h5 class="card-title">After</h5>
-                        <p class="card-text">After I met Nurse Practitioner Juantia.</p>
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper"><img src="{{ url_for('static', filename='3.jpg')}}" class="d-block w-100" alt="Image 3"> </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Before</h5>
+                    <p class="card-text">"Before meeting Nurse Practitioner Juantia, I had almost given up on my health goals." - Person 3</p>
                   </div>
-                  <div class="carousel-item">
-                    <div class="card">
-                      <div class="img-wrapper"><img src="{{ url_for('static', filename='3.jpg')}}" class="d-block w-100" alt="..."> </div>
-                      <div class="card-body">
-                        <h5 class="card-title">Before</h5>
-                        <p class="card-text">Before I met Nurse Practitioner Juantia.</p>
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper"><img src="{{ url_for('static', filename='4.jpg')}}" class="d-block w-100" alt="Image 4"> </div>
+                  <div class="card-body">
+                    <h5 class="card-title">After</h5>
+                    <p class="card-text">"Thanks to Nurse Practitioner Juantia, I regained my confidence and improved my overall well-being." - Person 4</p>
                   </div>
-                  <div class="carousel-item">
-                    <div class="card">
-                      <div class="img-wrapper"><img src="{{ url_for('static', filename='4.jpg')}}" class="d-block w-100" alt="..."> </div>
-                      <div class="card-body">
-                        <h5 class="card-title">After</h5>
-                        <p class="card-text">After I met Nurse Practitioner Juantia.</p>
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper"><img src="{{ url_for('static', filename='5.jpg')}}" class="d-block w-100" alt="Image 5"> </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Before</h5>
+                    <p class="card-text">"My journey with weight loss was filled with ups and downs before I met Nurse Practitioner Juantia." - Person 5</p>
                   </div>
-                  <div class="carousel-item">
-                    <div class="card">
-                      <div class="img-wrapper"><img src="{{ url_for('static', filename='5.jpg')}}" class="d-block w-100" alt="..."> </div>
-                      <div class="card-body">
-                        <h5 class="card-title">Before</h5>
-                        <p class="card-text">Before I met Nurse Practitioner Juantia.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card">
-                      <div class="img-wrapper"><img src="{{ url_for('static', filename='6.jpg')}}" class="d-block w-100" alt="..."> </div>
-                      <div class="card-body">
-                        <h5 class="card-title">After</h5>
-                        <p class="card-text">After I met Nurse Practitioner Juantia.</p>
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper"><img src="{{ url_for('static', filename='6.jpg')}}" class="d-block w-100" alt="Image 6"> </div>
+                  <div class="card-body">
+                    <h5 class="card-title">After</h5>
+                    <p class="card-text">"After following the personalized plan by Nurse Practitioner Juantia, I finally achieved my desired weight." - Person 6</p>
                   </div>
                 </div>
               </div>
@@ -164,11 +159,18 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  
       
-      <div class="" style=" font-style: italic; font-size: 18px; display: flex;  justify-content: center;"><p style="padding: 3px; width: 80%;"> I suffered with weight loss from the age of about 25. I tried every single diet there is and I still gained the weight back or never lost it. 
-        I met Nurse Practitioner Juantia at one of the lowest points in my life and she completely turned that around for me.
-        Ozempic has been life changing for me, going from 198lbs to 135lbs in about 7-8 months. With diet, exercise and her expertise, this has changed regained my confidence, lowered my anxiety and changed my outlook on life.Thank you Juanita for everything you do!
-        </p></div>
+    <div style="display: flex; justify-content: center;" class="row">
+        <div>
+            <img src="{{url_for('static', filename='log.jpeg')}}"  style="width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <p style="justify-content: center; text-align: center; font-style: italic; font-family: cursive; font-weight: bolder; font-size: large; margin-top: 15%;">
+            <q>The key to happiness is not to wait for it to happen, but to take the journey towards it.</q> 
+        </p>
+    </div>
 </body>
 
 <script>
