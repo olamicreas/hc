@@ -312,7 +312,7 @@
   /*CONTAINER*/
   .container{
   width:100%;
-  min-height:100vh;
+  height:100vh;
   background-image:url("satori-banner-1.jpg");
   background-size:cover;
   position:relative;
