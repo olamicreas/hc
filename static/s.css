@@ -313,7 +313,8 @@
   .container{
   width:100%;
   height:100vh;
-  background-image:url("satori-banner-1.jpg");
+  min-width:100vh;
+  background-image:url("satori-banner-2.jpg");
   background-size:cover;
   position:relative;
   }
