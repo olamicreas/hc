@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .header img {
+            width: 200px;
+            height: auto;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            background-color: rgb(30, 30, 30);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 0 0 5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://satoriselfcare.com/static/log.jpeg" alt="Logo">
+            <h1>Booking Confirmation</h1>
+        </div>
+        <div class="content">
+            <p style="text-align: center; font-size: x-large;">
+                Dear {{ name }}, thank you for booking with us.
+            </p>
+            <p style="text-align: center; font-size: large;">
+                Your appointment is scheduled for {{ day }}/{{ month }}/{{ year }} at {{ time }}.
+            </p>
+            <p style="text-align: center;">
+                We will contact you if there will be a reschedulement.
+            </p>
+        </div>
+        <div class="footer">
+            <p>© {{ year }} satoriselfcare. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
