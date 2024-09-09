@@ -276,33 +276,7 @@ body, html{
             padding-right:5px;
           }
         }
-        .ui-datepicker-prev,
-        .ui-datepicker-next {
-          top:-5px;
-          position: absolute;
-          padding: 5px;
-          cursor: pointer;
-        }
-        .ui-datepicker-prev {
-          left:0;
-        }
-        .ui-datepicker-next {
-          right:0;
-        }
-        .ui-datepicker-prev:before{
-          content: "\f053";
-          font-family: FontAwesome;
-        }
-        .ui-datepicker-next:after{
-          content: "\f054";
-          font-family: FontAwesome;
-        }
-        .ui-datepicker-prev span,
-        .ui-datepicker-next span{
-          display: inline-block;
-          text-indent: -9999px;
-        }
-      }
+        
       .ui-datepicker-calendar{
         width:100%;
         th{
@@ -372,21 +346,28 @@ body, html{
             
             <div class="inner-wrap">
             
-              <form>
+              <form method="POST">
+              <input type="hidden" name="day" id="selectedDay">
+               <input type="hidden" name="month" id="selectedMonth">
+               <input type="hidden" name="year" id="selectedYear">
+               <input type="hidden" name="time" id="selectedTime">
                 <div class="form-name">
-                  <input style="width: 100%; height: 5%;" type="text" name="name" id="name">
-                  <label for="name">Your name</label>
+                  <input style="width: 100%; height: 5%;" type="text" name="name" id="name" placeholder="Your full name">
+                 
                 </div>
                 
                 <div class="form-name">
-                  <input style="width: 100%; height: 5%;" type="number" name="email" id="email" >
-                  <label for="email">Your number</label>
+                  <input style="width: 100%; height: 5%;" type="number" name="number" id="number" placeholder="Your phone number" >
+                  
                 </div>
                 <div class="form-name">
-                  <input style="width: 100%; height: 5%;" type="email" name="email" id="email">
-                  <label for="email">Your email</label>
+                  <input style="width: 100%; height: 5%;" type="email" name="email" id="email" placeholder="Your email">
+                  
                 </div>
-                
+                <div style="display: none;">
+                  <input type="" name="day" class="day" id="day">
+                  <input type="" name="time" class="time" id="time">
+                </div>
                 <button type="submit" class="request disabled">
                   Request appointment <br class="break">
                   <span>on</span>
