@@ -1,387 +1,361 @@
-<html>
-    <head>
-        <title></title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <link href= 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'> 
-      
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" > </script> 
-      
-        <script src= "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" > </script> 
-            
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css" integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.css" integrity="sha512-riTSV+/RKaiReucjeDW+Id3WlRLVZlTKAJJOHejihLiYHdGaHV7lxWaCfAvUR0ErLYvxTePZpuKZbrTbwpyG9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Appointment Booking</title>
 
-    </head>
-
-    <style>
-        *{
-  font-family: 'Source Sans Pro', sans-serif;
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-body, html{
-  overflow-x:hidden;
-}
-.wrapper{
-  padding: 0 10% 10% 10%;
-  
-  .timepicker-cf{
-    height:60px;
-    width:100%;
-  }
-  .timepicker{
-    position:absolute;
-    top:200px;
-    width:80%;
-    height:0px;
-    background:#667483;
-    overflow:hidden;
-      .owl, .owl-stage{
-        width:100%;
-        height:60px;
-        display:flex;
-        align-items: center;
-        .owl-item{
-          font-size:1.1em;
-          display:inline-block;
-          font-weight:600;
-          color:white;
-          text-align:center;
-          min-width:100px;
-          opacity:0.4;
-          cursor:pointer;
-          transition:all .2s ease-in-out;
-        }
-        .center-n{
-          font-size:1.5em;
-          opacity:0.7;
-        }
-        .center{
-          font-size:2em;
-          opacity:1;
-        }
-      }
-    }
-    .fade-l{
-      position:absolute;
-      height:100%;
-      width:150px;
-      left:0;
-      top:0;
-      background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-      background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-      background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
-    }
-    .fade-r{
-      position:absolute;
-      height:100%;
-      width:150px;
-      right:0;
-      top:0;
-      background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-      background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
-      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
-    }
-    .owl-prev, .owl-next{
-      z-index:20;
-      position:absolute;
-      width:20px;
-      top:20px;
-      color:#667483;
-      cursor:pointer;
-      transition:.2s ease-in-out;
-      background:none;
-      border:0;
-      font-size:1em;
-    }
-    .owl-prev{
-      left:20px;
-      
-      &:before{
-        content: '\f053';
-        font-family: FontAwesome;
-      }
-      &:hover{
-        left:18px;
-        transition:.2s ease-in-out;
-      }
-    }
-    .owl-next{
-      right:20px;
-      
-      &:hover{
-        right:18px;
-        transition:.2s ease-in-out;
-      }
-      &:before{
-        content: '\f054';
-        font-family: FontAwesome;
-      }
-    }
-  }
-  .inner-wrap{
-    padding:0 10%;
+    <!-- jQuery and jQuery UI -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     
-    .request{
-      width:100%;
-      height:50px;
-      text-align:left;
-      padding:0 20px;
-      border:none;
-      background:#667483;
-      color:#fff;
-      font-weight:600;
-      font-size:1em;
-      cursor:pointer;
-      transition:all .2s ease-in-out;
-      opacity:1;
-      position:relative;
-      br{
-        display:none;
-      }
-      .sendRequest{
-        position:absolute;
-        right:20px;
-        top:16px;
-        
-        &:before{
-          content: '\f054';
-          font-family: FontAwesome;
-        }
-      }
-      &:hover{
-        padding-right:15px;
-        transition:all .2s ease-in-out;
-      }
-      &.disabled{
-        opacity:0.8;
-        pointer-events:none;
-        background:#888d93;
-        transition:all .3s ease-in-out;
-      }
-    }
-    .disabled span{
-      display:none;
-    }
-    input{
-      border: none;
-    }
-    .form-name {
-      display: flex;
-      position: relative;
-      height: 50px;
-      align-items: flex-end;
-      margin-bottom:13px;
-      label, input{
-        font-size: 1em;
-        font-weight:600;
-        color: #667483;
-      }
-      label{
-        position: absolute;
-        margin: 0;
-        left: 10px;
-        top: 15px;
-        transition: all 250ms ease 0s;
-      }
-      input{
-        height: 80%;
-        width:100%;
-        border-bottom: 2px solid #667483;
-        padding: 0 10px;
-        &:focus{
-          outline: none;
-        }
-        &:focus + label{
-          font-size: 0.8em;
-          left: .15rem;
-          top: 0%;
-        }
-        &:invalid{
-          border-bottom: 2px solid #c23616;
-          color:#c23616;
-        }
-        &:invalid + label{
-          font-size: 0.8em;
-          color: #c23616;
-          left: .15rem;
-          top: 0%;
-        }
-      }
-      &:last-of-type{
-        margin-bottom:50px;
-      }
-    }
-  }
-  #calendar{
-    overflow:hidden;
-    position:relative;
-    .header{
-      width:100%;
-      height:160px;
-      background-image:url('http://www.wallnoefer.it/fileadmin/_processed_/csm_terminvereinbarung_902fa70775.jpg');
-      background-size:100% auto;
-      .overlay{
-        width:100%;
-        height:100%;
-        background:rgba(106, 102, 95, 0.6);
-        color:#fff;
-        padding:3% 5%;
-        display:flex;
-        align-items:flex-end;
-      }
-      h1{
-        font-size:2em;
-        font-family: 'Playfair Display', serif;
-        font-weight:700;
-        letter-spacing:1%;
-      }
-    }
-    .monthChange{
-      background:#fff;
-      width:100%;
-      height:0;
-      position:absolute;
-      top:160px;
-      z-index:20;
-    }
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    .ui-datepicker{
-      display: none;
-      width: 100%;
-      margin:auto;
-      padding:30px 10% 30px 10%;
-      text-transform: uppercase;
-      background: #fff;
-      transition:all .2s ease-in-out;
-      .ui-datepicker-header {
-        position: relative;
-        margin-bottom: 10px;
-
-        .ui-datepicker-title { 
-          text-align: center;
-          font-weight:700;
-          color:#353C42;
-
-          .ui-datepicker-month {
+    <!-- Custom CSS -->
+    <style>
+        * {
+            font-family: 'Source Sans Pro', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            overflow-x: hidden;
+        }
+        .wrapper {
+            padding: 0 10% 10% 10%;
+        }
+        .timepicker-cf {
+            height: 60px;
+            width: 100%;
+        }
+        .timepicker {
+            position: absolute;
+            top: 200px;
+            width: 80%;
+            height: 0;
+            background: #667483;
+            overflow: hidden;
+        }
+        .owl, .owl-stage {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+        .owl-item {
+            font-size: 1.1em;
+            display: inline-block;
+            font-weight: 600;
+            color: white;
+            text-align: center;
+            min-width: 100px;
+            opacity: 0.4;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }
+        .center-n {
+            font-size: 1.5em;
+            opacity: 0.7;
+        }
+        .center {
+            font-size: 2em;
+            opacity: 1;
+        }
+        .fade-l {
+            position: absolute;
+            height: 100%;
+            width: 150px;
+            left: 0;
+            top: 0;
+            background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        }
+        .fade-r {
+            position: absolute;
+            height: 100%;
+            width: 150px;
+            right: 0;
+            top: 0;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+        }
+        .owl-prev, .owl-next {
+            z-index: 20;
+            position: absolute;
+            width: 20px;
+            top: 20px;
+            color: #667483;
+            cursor: pointer;
+            transition: .2s ease-in-out;
+            background: none;
+            border: 0;
+            font-size: 1em;
+        }
+        .owl-prev {
+            left: 20px;
+        }
+        .owl-prev:before {
+            content: '\f053';
+            font-family: FontAwesome;
+        }
+        .owl-prev:hover {
+            left: 18px;
+        }
+        .owl-next {
+            right: 20px;
+        }
+        .owl-next:before {
+            content: '\f054';
+            font-family: FontAwesome;
+        }
+        .owl-next:hover {
+            right: 18px;
+        }
+        .inner-wrap {
+            padding: 0 10%;
+        }
+        .request {
+            width: 100%;
+            height: 50px;
+            text-align: left;
+            padding: 0 20px;
+            border: none;
+            background: #667483;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            opacity: 1;
             position: relative;
-            padding-right:5px;
-          }
         }
-        
-      .ui-datepicker-calendar{
-        width:100%;
-        th{
-          line-height: 30px;
-          padding-top: 15px;
-          text-align: center;
-          font-weight: 600;
-          font-size:0.95em;
-          color: #667483;
+        .request br {
+            display: none;
         }
-        td{
-          padding: 0 7px;
-          text-align: center;
-          height:34px;
-          font-weight:600;
-          cursor:pointer;
-          box-sizing:border-box;
-          transition:all .2s ease-in-out;
-          
-          &:hover{
-            background:#efefef;
-            transition:all .2s ease-in-out;
-          }
+        .sendRequest {
+            position: absolute;
+            right: 20px;
+            top: 16px;
         }
-        .ui-datepicker-current-day{
-          background:#dbdbdb;
-          border-bottom:2px solid rgb(53, 60, 66);
-          &.open{
-            margin-bottom:100px;
-          }
+        .request:hover {
+            padding-right: 15px;
         }
-        .ui-datepicker-today{
-          .ui-state-default{
-            border-bottom:2px solid rgba(53, 60, 66, 0.5);
-          }
+        .request.disabled {
+            opacity: 0.8;
+            pointer-events: none;
+            background: #888d93;
         }
-        .ui-state-default{
-          text-decoration:none;
-          color: #353C42;
+        .disabled span {
+            display: none;
         }
-        .ui-datepicker-other-month{
-          pointer-events:none;
-          .ui-state-default{
+        input {
+            border: none;
+        }
+
+        .form-name input {
+            height: 40px; /* Adjust height to ensure visibility */
+            width: 100%;
+            border: 1px solid #ccc; /* Add border for visibility */
+            padding: 10px; /* Adjust padding for better appearance */
+            background: #fff; /* Background color for visibility */
+            font-size: 1em; /* Ensure font size is visible */
+            color: #333; /* Text color */
+            box-sizing: border-box; /* Include padding and border in width calculation */
+        }
+
+        /* Style for placeholder */
+        .form-name input::placeholder {
+            color: #888; /* Placeholder text color */
+            font-weight: 400; /* Placeholder font weight */
+        }
+        .form-name {
+            display: flex;
+            position: relative;
+            height: 50px;
+            align-items: flex-end;
+            margin-bottom: 13px;
+        }
+        .form-name label, .form-name input {
+            font-size: 1em;
+            font-weight: 600;
+            color: #667483;
+        }
+        .form-name label {
+            position: absolute;
+            margin: 0;
+            left: 10px;
+            top: 15px;
+            transition: all 250ms ease 0s;
+        }
+        .form-name input {
+            height: 80%;
+            width: 100%;
+            border-bottom: 2px solid #667483;
+            padding: 0 10px;
+        }
+        .form-name input:focus {
+            outline: none;
+            border-bottom-color: #1e90ff;
+        }
+        .form-name input:focus + label {
+            font-size: 0.8em;
+            left: 0.15rem;
+            top: 0%;
+        }
+        .form-name input:invalid {
+            border-bottom: 2px solid #c23616;
+            color: #c23616;
+        }
+        .form-name input:invalid + label {
+            font-size: 0.8em;
+            color: #c23616;
+            left: 0.15rem;
+            top: 0%;
+        }
+        .form-name:last-of-type {
+            margin-bottom: 50px;
+        }
+        #calendar {
+            overflow: hidden;
+            position: relative;
+        }
+        .header {
+            width: 100%;
+            height: 160px;
+            background-image: url('http://www.wallnoefer.it/fileadmin/_processed_/csm_terminvereinbarung_902fa70775.jpg');
+            background-size: 100% auto;
+        }
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background: rgba(106, 102, 95, 0.6);
+            color: #fff;
+            padding: 3% 5%;
+            display: flex;
+            align-items: flex-end;
+        }
+        .header h1 {
+            font-size: 2em;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: 1%;
+        }
+        .monthChange {
+            background: #fff;
+            width: 100%;
+            height: 0;
+            position: absolute;
+            top: 160px;
+            z-index: 20;
+        }
+        .ui-datepicker {
+            display: none;
+            width: 100%;
+            margin: auto;
+            padding: 30px 10% 30px 10%;
+            text-transform: uppercase;
+            background: #fff;
+            transition: all .2s ease-in-out;
+        }
+        .ui-datepicker-header {
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .ui-datepicker-title {
+            text-align: center;
+            font-weight: 700;
+            color: #353C42;
+        }
+        .ui-datepicker-calendar {
+            width: 100%;
+        }
+        .ui-datepicker-calendar th {
+            line-height: 30px;
+            padding-top: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.95em;
+            color: #667483;
+        }
+        .ui-datepicker-calendar td {
+            padding: 0 7px;
+            text-align: center;
+            height: 34px;
+            font-weight: 600;
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: all .2s ease-in-out;
+        }
+        .ui-datepicker-calendar td:hover {
+            background: #efefef;
+        }
+        .ui-datepicker-current-day {
+            background: #dbdbdb;
+            border-bottom: 2px solid rgb(53, 60, 66);
+        }
+        .ui-datepicker-today .ui-state-default {
+            border-bottom: 2px solid rgba(53, 60, 66, 0.5);
+        }
+        .ui-state-default {
+            text-decoration: none;
+            color: #353C42;
+        }
+        .ui-datepicker-other-month .ui-state-default {
             color: #919BA3;
-          }
         }
-      }
-    }
-}
-@media only screen and (max-width: 600px)  {
-  .wrapper .inner-wrap .request br{
-    display:block;
-  }
-}
+        @media only screen and (max-width: 600px) {
+            .wrapper .inner-wrap .request br {
+                display: block;
+            }
+        }
     </style>
-    <body>
-        <div class="wrapper">
-  
-            <div id="calendar">
-              <div class="header">
+</head>
+<body>
+    <div class="wrapper">
+        <div id="calendar">
+            <div class="header">
                 <div class="overlay">
-                  <h1>Make appointment</h1>
+                    <h1>Make appointment</h1>
                 </div>
-              </div>
-              <div class="monthChange"></div>
             </div>
-            
-            <div class="inner-wrap">
-            
-              <form method="POST">
-              <input type="hidden" name="day" id="selectedDay">
-               <input type="hidden" name="month" id="selectedMonth">
-               <input type="hidden" name="year" id="selectedYear">
-               <input type="hidden" name="time" id="selectedTime">
+            <div class="monthChange"></div>
+        </div>
+        
+        <div class="inner-wrap">
+            <form method="POST">
+                <input type="hidden" name="day" id="selectedDay">
+                <input type="hidden" name="month" id="selectedMonth">
+                <input type="hidden" name="year" id="selectedYear">
+                <input type="hidden" name="time" id="selectedTime">
                 <div class="form-name">
-                  <input style="width: 100%; height: 5%;" type="text" name="name" id="name" placeholder="Your full name">
-                 
-                </div>
-                
-                <div class="form-name">
-                  <input style="width: 100%; height: 5%;" type="number" name="number" id="number" placeholder="Your phone number" >
-                  
+                    <input type="text" name="name" id="name" placeholder="Your full name">
                 </div>
                 <div class="form-name">
-                  <input style="width: 100%; height: 5%;" type="email" name="email" id="email" placeholder="Your email">
-                  
+                    <input type="number" name="number" id="number" placeholder="Your phone number">
+                </div>
+                <div class="form-name">
+                    <input type="email" name="email" id="email" placeholder="Your email">
                 </div>
                 <div style="display: none;">
-                  <input type="" name="day" class="day" id="day">
-                  <input type="" name="time" class="time" id="time">
+                    <input type="" name="day" class="day" id="day">
+                    <input type="" name="time" class="time" id="time">
                 </div>
                 <button type="submit" class="request disabled">
-                  Request appointment <br class="break">
-                  <span>on</span>
-                  <span class="day"></span>
-                  <span>at</span>
-                  <span class="time"></span>
-                  <div class="sendRequest"></div>
+                    Request appointment <br class="break">
+                    <span>on</span>
+                    <span class="day"></span>
+                    <span>at</span>
+                    <span class="time"></span>
+                    <div class="sendRequest"></div>
                 </button>
-              </form>
-          
-            </div>
-            
-            <div class='timepicker'>
-              <div class="owl">
+            </form>
+        </div>
+        
+        <div class='timepicker'>
+            <div class="owl">
                 <div>06:00</div>
                 <div>07:00</div>
                 <div>08:00</div>
@@ -397,12 +371,11 @@ body, html{
                 <div>18:00</div>
                 <div>19:00</div>
                 <div>20:00</div>
-              </div>
-              <div class="fade-l"></div>
-              <div class="fade-r"></div>
             </div>
-              
-          </div>
-        <script src="{{url_for('static', filename='s.js')}}"></script>
-    </body>
+            <div class="fade-l"></div>
+            <div class="fade-r"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='s.js') }}"></script>
+</body>
 </html>
