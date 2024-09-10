@@ -42,14 +42,14 @@ def service():
 
         # Subject and recipient email
         sub = f'Booking Confirmation for {name}'
-        rm = 'olamicreas@gmail.com'  # Replace with your admin or recipient email
+        rm = 'satoriselfcare@gmail.com'  # Replace with your admin or recipient email
 
         # Render HTML body with template and form data
         html_body = render_template('cmail.html', name=name, day=day, month=month, year=year, time=time)
 
         try:
             # Create the email message
-            msg = Message(subject=sub, sender='appointment@satoriselfcare.com', recipients=[email, rm, 'satoriselfcare@gmail.com'])
+            msg = Message(subject=sub, sender='appointment@satoriselfcare.com', recipients=[email, rm])
             msg.html = html_body  # Set the HTML body of the email
             
             # Send the email
