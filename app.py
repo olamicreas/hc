@@ -49,7 +49,7 @@ def service():
 
         try:
             # Create the email message
-            msg = Message(subject=sub, sender=os.environ['smtp_email'], recipients=[email,rm])
+            msg = Message(subject=sub, sender=os.environ['smtp_email'], recipients=[email])
             msg.html = html_body  # Set the HTML body of the email
             
             # Send the email
