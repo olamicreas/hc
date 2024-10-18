@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Configure Flask-Mail
 app.config['MAIL_SERVER'] = 'mail.satoriselfcare.com'  # cPanel mail server address
 app.config['MAIL_PORT'] = 465  # Port for SSL (or 587 for TLS)
-app.config['MAIL_USERNAME'] = os.environ['email']
+app.config['MAIL_USERNAME'] = os.environ['smtp_email']
 app.config['MAIL_PASSWORD'] = os.environ['smtp_password']  # The password for booking@satoriselfcare.com
 app.config['MAIL_DEFAULT_SENDER'] = app.config['MAIL_USERNAME']
 app.config['MAIL_USE_TLS'] = False  # Use SSL instead of TLS
