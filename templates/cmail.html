@@ -12,50 +12,28 @@
             background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             margin: auto;
         }
-        .header {
-            background-color: #4CAF50;
-            color: #ffffff;
+        h2 {
+            color: #4CAF50;
             text-align: center;
-            padding: 15px;
-            border-radius: 8px 8px 0 0;
-        }
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-        .footer {
-            background-color: #333333;
-            color: #ffffff;
-            text-align: center;
-            padding: 15px;
-            border-radius: 0 0 8px 8px;
         }
         p {
-            line-height: 1.5;
             font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h2>Appointment Confirmation</h2>
-        </div>
-        <div class="content">
-            <p>Hi {{ name }},</p>
-            <p>Thank you for choosing Satori Self-Care. We're pleased to confirm your booking.</p>
-            <p>Your appointment is set for <strong>{{ day }}/{{ month }}/{{ year }}</strong> at <strong>{{ time }}</strong>.</p>
-            <p>If any changes occur, we’ll notify you as soon as possible.</p>
-            <p>Looking forward to seeing you!</p>
-        </div>
-        <div class="footer">
-            <p>Best Regards,<br/>Satori Self-Care Team</p>
-            <p>© {{ year }} Satori Self-Care. All rights reserved.</p>
-        </div>
+        <h2>Appointment Confirmation</h2>
+        <p>Hello {{ name }},</p>
+        <p>Your booking is confirmed for {{ day }}/{{ month }}/{{ year }} at {{ time }}.</p>
+        <p>Thank you for choosing Satori Self-Care. We look forward to seeing you soon!</p>
+        <p>Best regards,<br/>Satori Self-Care Team</p>
+        <p>© {{ year }} Satori Self-Care. All rights reserved.</p>
     </div>
 </body>
 </html>
