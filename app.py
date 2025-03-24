@@ -49,8 +49,8 @@ def service():
 
         try:
             # Create the email message
-            msg = Message(subject=sub, sender=os.environ['smtp_email'], recipients=[email,rm])
-            msg.html = html_body  # Set the HTML body of the email
+            #msg = Message(subject=sub, sender=os.environ['smtp_email'], recipients=[email,rm])
+            #msg.html = html_body  # Set the HTML body of the email
             
             # Send the email
             #mail.send(msg)
