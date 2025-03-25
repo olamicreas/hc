@@ -47,7 +47,7 @@ def service():
         # Render HTML body with template and form data
         html_body = render_template('cmail.html', name=name, day=day, month=month, year=year, time=time)
 
-        try:
+        #try:
             # Create the email message
             #msg = Message(subject=sub, sender=os.environ['smtp_email'], recipients=[email,rm])
             #msg.html = html_body  # Set the HTML body of the email
@@ -56,8 +56,8 @@ def service():
             #mail.send(msg)
 
             #return render_template('suc.html')  # Success page
-        except Exception as e:
-            return f'Failed to book appointment: {str(e)}'  # Return error message if email fails to send
+        #except Exception as e:
+            #return f'Failed to book appointment: {str(e)}'  # Return error message if email fails to send
     
     return render_template('service.html')  # Render the service page if GET request
 
